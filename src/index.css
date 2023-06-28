@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('./fonts/RobotoMono-Regular.ttf') format('truetype');
+}
+*{
+  font-family: "Roboto Mono", sans-serif;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+

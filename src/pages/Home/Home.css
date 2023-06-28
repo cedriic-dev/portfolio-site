@@ -1,0 +1,113 @@
+:root {
+    --CBpurple: #682ae9;
+    --CBbg: #0e1212;
+    --CBtext: #abc4ff;
+}
+
+body {
+    background: var(--CBbg);
+    color: var(--CBtext);
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-image: url("../../assets/images/background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.name {
+    font-size: 3em;
+}
+
+.firstName {
+    color: white;
+}
+
+.lastName {
+    color: var(--CBtext);
+}
+
+.title {
+    margin-top: 20px;
+}
+
+.cursor {
+    color: var(--CBtext);
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { color: transparent; }
+    50% { color: var(--CBtext); }
+}
+
+.page-content {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.next-section {
+    min-height: 100vh;
+}
+
+.fade-out-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+.scroll-down-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.scroll-down-title {
+    font-size: 2em;
+    color: var(--CBtext);
+}
+
+.scroll-down-instruction {
+    font-size: 1.2em;
+    color: var(--CBtext);
+}
